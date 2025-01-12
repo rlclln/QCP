@@ -1,11 +1,11 @@
 
-function X_est = RotSOCP(AnchorPos,r,NL_err,sigma)
+function X_est = QCP(AnchorPos,r,NL_err,sigma)
 % =======================================
 % INPUT: 
 % AnchorPos: the position of anchors, which size is dim*N, i.e., [dim,N] = size(AnchorPos).
 % r: range measurements with measurement noise and possible NLOS error e_i, that is: 
 % r_i =norm(AnchorPos_i - x) + e_i + n_i, for i = 1, ...,N. See Equation (3) in our paper.
-% sigma£º standard deviation of measurement noise. The size is N*1 or 1*1 which depends on demand,
+% sigmaÂ£Âº standard deviation of measurement noise. The size is N*1 or 1*1 which depends on demand,
 % that is,N*1 for experiment or 1*1 for i.i.d.
 % NL_err: the maximum value of NLOS error, a positive number .
 % OUTPUT:
